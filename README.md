@@ -68,13 +68,13 @@ run `npm run start`.
 
 ## Authors
 
-👤 **Author1**
+👤 **MR FOTSO PIRES**
 
 - GitHub: [@githubhandle]()
 - Twitter: [@twitterhandle]()
 - LinkedIn: [LinkedIn]()
 
-👤 **Author2**
+👤 **MR SOULEMANOU KUNCHIEFUH BABANOU**
 
 - GitHub: [@githubhandle]()
 - Twitter: [@twitterhandle]()
