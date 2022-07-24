@@ -40,7 +40,7 @@
 
 ## Live Demo available 
 
-[Live Demo Link]()
+[Live Demo Link](https://fastdevz.github.io/i-phone-shop/)
 
 
 ## Getting Started
