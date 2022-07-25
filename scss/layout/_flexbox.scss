@@ -1,0 +1,87 @@
+/*styles of the navigation bar*/
+#navigation{
+    display: flex;
+    justify-content: end;    
+    align-items: center;
+    gap: 50%;
+    margin-top: 2%;
+}
+#navUl{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    list-style: none;
+    #product{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .newIcon{
+            position: absolute;
+            width: auto;
+            height: auto;
+            top: -1em;
+            img {
+                max-width: 1.2em;
+                max-height: 1.2em;
+            }
+        }
+    }
+    
+}
+
+#navSearchCart {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    height: 100%;
+    width: auto;
+
+    i> img{
+        width: 1.3em;
+        height: 1.3em;
+    }
+   #cartCount {
+    #cardItemCountZone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        margin: 0;
+
+    }
+    #cardItemCount{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -1em;
+        left: 1.5em;
+        width: 1em;
+        height: 1em;
+        padding: 0.2em;
+        background-color: var(--txtbg);
+        color: var(--txt);
+        border-radius: 50%;
+        border: none;
+        /* to be changed in typographies*/ 
+        font-size: 0.8em;
+    }
+    #cartCount >i,img{
+        background-color: var(--bgcart);
+        border-radius: 50%;
+        border: none;
+        width: 1.5em;
+        height: 1.5em;
+        padding: 0.4em;
+    }
+   }
+}
+/* end of styles of the navigation bar*/
