@@ -1,11 +1,20 @@
 main{
-    margin: 5% 0 0 0;
-    border: 2px solid red;
+    margin: 0 ;
+    padding: 3% 0 0 0;
     display: grid;
     grid-template-columns: 2fr 4fr 1fr;
     grid-template-rows: auto;
-    height: 43vw;
-    .Productdetails{
-        
-    }
+    height: auto;
+    gap: 0;
+
+}
+#itemNavList{
+    margin: 0;
+}
+#textzone{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0;
+    gap: 0;
 }

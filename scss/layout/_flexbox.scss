@@ -3,7 +3,7 @@
     display: flex;
     justify-content: end;    
     align-items: center;
-    gap: 45%;
+    gap: 40vw;
     padding-top: 0.5em;
     margin-top: 2%;
 }
@@ -20,7 +20,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .newIcon{
+        .newIcon  {
             position: absolute;
             width: auto;
             height: auto;
@@ -86,3 +86,118 @@
    }
 }
 /* end of styles of the navigation bar*/
+#countItemZone{
+    background-color: var(--txthead2);
+    padding: 2% 0 0 0 ;
+    width: 11vw;
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    span{
+        font-weight: 700;
+        font-size: 1vw;
+    }
+    #upClick, #downClick{
+        padding: 5% 0;
+    }
+    #iCount{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        border: none;
+    }
+    #icons{
+        display: flex;
+        gap: 1em;
+    }
+    i>img{
+        width: 1.8em;
+        height: 1.8em;
+        padding: 2% 2% 2% 0;
+}
+}
+#shopbutton{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--bgcart);
+    padding: 3%;
+    margin: 5% 0;
+    border-radius: 50px;
+    width: 14vw;
+    border: none;
+    #shoptCartAdd{
+        display:flex ;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bgbasket);
+        padding: 5%;
+        border: none;
+        border-radius: 50%;
+        img{
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        color: var(--txt);
+        font-size: 1.5vw;
+        margin: 0 0 0 8%;
+        font-weight: 400;
+    }
+
+}
+#linkToProduct{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 2%;
+    a{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.3vw;
+        font
+        span{
+            margin-right: 2%;
+        }
+    }
+}
+#itemNav{
+    display: flex;
+    justify-content: end;
+    gap: 25%;
+    #itemNavList{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 1vw;
+            gap: 0.5em;
+            margin-bottom: 8rem;
+            img{
+                width: 5.5vw;
+                height: 5.5vw;
+            }
+        }
+        li:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
