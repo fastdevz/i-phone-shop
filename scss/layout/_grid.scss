@@ -1,3 +1,4 @@
+@use '../utils' as u;
 main{
     margin: 0 ;
     padding: 3% 0 0 0;
@@ -6,12 +7,40 @@ main{
     grid-template-rows: auto;
     height: auto;
     gap: 0;
-
+    @include u.breakpoint-down(small){
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+     }
+     #itemBackground{
+        @include u.breakpoint-down(small){
+            display: flex;
+            width: 98%;
+            height: 60vw;
+          
+            justify-content: center;
+            align-items: center;
+            padding-inline: auto ;
+            border-radius: 12px;
+            /*here is rotation iframe design */
+            iframe{
+                width: 100%;
+                border-radius: 12px;
+                height: 60vw;
+            }
+         }
+     }
 }
 #itemNavList{
     margin: 0;
 }
 #textzone{
+    @include u.breakpoint-down(small){
+        display: none;
+        h1{
+            font-size: 6vw;
+            color: var(--txthead);
+        }
+    }
     display: flex;
     flex-direction: column;
     margin-top: 0;

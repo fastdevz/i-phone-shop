@@ -1,4 +1,5 @@
 /*styles of the navigation bar*/
+@use '../utils' as u;
 #navigation{
     display: flex;
     justify-content: end;    
@@ -6,15 +7,89 @@
     gap: 40vw;
     padding-top: 0.5em;
     margin-top: 2%;
+    #hamborgaNavClose{
+        display: none;
+    }
+    @include u.breakpoint-down(small){
+        justify-content: start;  
+        margin: 1em 0 0 0;
+        padding: 0;
+        width: 100%;
+        height: 10vw;
+        gap:0;
+        .navUl{
+            display: none;
+        }
+       img{
+        width: 3em;
+        height: 3em;
+       }
+    }
 }
-#navUl{
+#navigation.active{
+    @include u.breakpoint-down(small){
+        display:block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: hsla(0, 0%, 60%, 0.973);
+        width: 100%;
+        height: 100%;
+        padding: 1em 0 0 1em;
+        #hamborgaNav{
+            display: none;
+        }
+        #hamborgaNavClose{
+           img{
+    
+                width: 2em;
+                height: 2em;
+            
+           }
+        }
+        #navSearchCart{
+            display: flex;
+            #navSearchCart{
+                display: flex;
+                flex-direction: column;
+                border: 5px soolid red;
+                #cartCount{
+                    border: 5px soolid red;
+                }
+            }
+            
+        }
+      ul{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content:end;
+        flex-direction: column;
+        li{
+            margin: 0;
+        padding: 0;
+        #product{
+            flex-direction: row;
+        }
+            a{
+                color: var(--bgcart);
+                margin: 0;
+                padding: 0;
+            }
+        
+        }
+      }
+     }
+}
+.navUl{
     display: inherit;
     justify-content: center;
     align-items: center;
     gap: 2em;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    padding: 0;
+    margin: 0;
     list-style: none;
+ }
     #product{
         position: relative;
         display: flex;
@@ -32,8 +107,6 @@
         }
     }
     
-}
-
 #navSearchCart {
     margin: 0;
     padding: 0;
@@ -43,7 +116,9 @@
     gap: 3em;
     height: 100%;
     width: auto;
-
+    @include u.breakpoint-down(small){
+        display:none;
+     }
     i> img{
         width: 1.3em;
         height: 1.3em;
@@ -58,6 +133,7 @@
         margin: 0;
 
     }
+    
     #cardItemCount{
         position: absolute;
         display: flex;
@@ -86,6 +162,12 @@
    }
 }
 /* end of styles of the navigation bar*/
+#Productdetails{
+    @include u.breakpoint-down(small){
+        display: none;
+
+}
+}
 #countItemZone{
     background-color: var(--txthead2);
     padding: 2% 0 0 0 ;
@@ -168,8 +250,11 @@
         width: 100%;
         text-decoration: none;
         font-size: 1.3vw;
-        gap: 3em;
-        font
+        gap: 0;
+        @include u.breakpoint-down(small){
+        font-size: 5vw;
+        gap:0;
+        }
         span{
             margin-right: 2%;
         }
@@ -184,21 +269,201 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include u.breakpoint-down(small){
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 12fr;
+           gap: 0.5em;
+           width: 100%;
+           height: inherit;
+           margin: 0;
+           padding: 1em 0;
+        }
         li{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             font-size: 1vw;
-            gap: 0.5em;
+            gap: 0.2em;
             margin-bottom: 8rem;
+            span{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .priceMobile{
+                    display: none;
+                   }
+            }
+            @include u.breakpoint-down(small){
+                margin: 0;
+                padding: 0;
+                width: min-content;
+                font-size: 5vw;
+                border-radius: 12px;
+                box-shadow: rgba(0, 0, 0, 0.16)0px 1px 4px;
+                span{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .priceMobile{
+                        margin-top: 0.5em;
+                        display: flex;
+                        color: var(--txthead);
+                       }
+                }
+            }
             img{
                 width: 5.5vw;
                 height: 5.5vw;
+                @include u.breakpoint-down(small){
+                    width: 45.5vw;
+                    height: 43.5vw;
+                    border-radius: 12px;
+                }
             }
         }
-        li:last-child{
+        li:nth-child(3){
             margin-bottom: 0;
+          
+        }
+        li:nth-child(4){
+           display: none;
+           @include u.breakpoint-down(small){
+            display: block;   
+        }
+          
+        }
+        
+    }
+    
+}
+
+/*============================== Product page styling  ================================*/
+#productbackground{
+    background-image: url(../resources/images/product-page/banner-iplace-home-slides-081021-iphone-13-varejo-banner-1-desk-1.jpeg);
+    background-repeat: no-repeat;
+    padding-inline: 2em;
+    background-size: contain;
+    margin-top: 1em;
+}
+.smallNavIndicator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--txt);
+    margin-top: 1em;
+    a{
+        color: var(--txtbg);
+    }
+    .filters{
+        display: inherit;
+        justify-content: end;
+        align-items: center;
+        gap: 1em;
+        p{
+            color: var(--txtbg);
+        }
+        select{
+            border-radius:12px;
+            border: none;
+            min-width: 8vw;
+            min-height: 1.5vw;
+            padding: 0.5em;
+            box-shadow: rgba(0, 0, 0, 0.16)0px 1px 4px;
         }
     }
 }
+#productCart{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin: 28vw 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+    @include u.breakpoint-down(small){
+        grid-template-columns: 6fr 6fr;
+        grid-template-rows: auto;
+    }
+    .itemCart{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.16)0px 1px 4px;
+        border-radius: 12px;
+        width:min-content;
+        height: auto;
+        @include u.breakpoint-down(small){
+            width: min-content;
+            height: auto;
+            border: 1px solid red;
+            img{
+                width: 5vw;
+                height: 35vw;
+            }
+        }
+        img{
+            width: 15vw;
+            align-self: center;
+            height: 15vw;
+            margin-inline: 2em;
+            margin-bottom: 0;
+            @include u.breakpoint-down(small){
+                margin-inline:1em;
+                width: 30vw;
+            align-self: center;
+            height: 30vw;
+            }
+        }
+        .phoneAction{
+            display: grid; 
+            justify-content: start;
+            line-height: 0.005em;
+            padding-inline: 1em;
+            border-radius: 12px;
+            background-color: var(--txt);
+            box-shadow: rgba(0, 0, 0, 0.16)0px 1px 4px;
+            margin: 0;
+            @include u.breakpoint-down(small){
+                
+            }
+            :first-child{
+                align-self: center;
+                font-size: 1.8vw;
+                font-weight: 700;
+            }
+            :nth-child(2){
+                color: var(--txtbg);
+                font-weight: 600;
+                font-size: 1.2vw;
+            }
+            :nth-child(3){
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;
+                button{
+                    border: none;
+                    background-color: var(--bgcart);
+                    color: var(--txt);
+                    font-size: 1em;
+                    border-radius: 12px;
+                    width: 100%;
+                    font-weight: 500;
+                    padding-inline: 1em;
+                }
+                p{
+                    color: var(--bgbasket);
+                }
+            }
+        }
+    }
+}
+/*============================== Product page styling  ================================*/

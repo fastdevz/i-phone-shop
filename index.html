@@ -10,14 +10,20 @@
 <body>
       <!-- ==================================== START OF NAVIGATION NAR  ================================== -->
     <nav id="navigation">
-        <ul id="navUl">
-            <li>Home</li>
+        <div id="hamborgaNav">
+            <i id="cardItemCountZone"><img src="resources/images/icons/icons8_Xbox_Menu_64px.png" alt="CardBoxIcon"></i>
+        </div>
+        <div id="hamborgaNavClose">
+            <i id="cardItemCountZone"><img src="resources/images/icons/icons8_close_64px.png" alt="CardBoxIcon"></i>
+        </div>
+        <ul class="navUl">
+            <li><a href="index.html">Home</a></li>
             <li id="product">
                 <i class="newIcon"><img src="resources/images/icons/icons8_new_26px.png" alt="New-icons"></i>
-                <span> Product</span>
+                <span><a href="product.html">Product</a></span>
             </li>
-            <li>About</li>
-            <li>Support</li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="support.html">Support</a></li>
         </ul>
         <span id="navSearchCart">
             <i><img src="resources/images/icons/icons8_search_50px_1.png" alt="Search-Icon"></i>
@@ -65,15 +71,22 @@
                 <ul id="itemNavList">
                     <li>
                         <div class=""><img src="resources/images/product-page/Apple_iPhone_11_Black_1000_0001.jpg" alt="itemIcon"></div>
-                        <span class="itemSubname">Iphone 11 Max</span>
+                        <!-- cart prices can only be displayed in the mobile version -->
+                        <span class="itemSubname">Iphone 11 Max<span class="priceMobile">$12.00</span></span>
                     </li>
                     <li>
                         <div class=""><img src="resources/images/product-page/Apple_iPhone_11_Black_1000_0001.jpg" alt="itemIcon"></div>
-                        <span class="itemSubname">Iphone 11 Max</span>
+                        <!-- cart prices can only be displayed in the mobile version -->
+                        <span class="itemSubname">Iphone 11 Max<span class="priceMobile">$12.00</span></span>
                     </li>
                     <li>
                         <div class=""><img src="resources/images/product-page/Apple_iPhone_11_Black_1000_0001.jpg" alt="itemIcon"></div>
-                        <span class="itemSubname">Iphone 11 Max</span>
+                        <!-- cart prices can only be displayed in the mobile version -->
+                        <span class="itemSubname">Iphone 11 Max <span class="priceMobile">$12.00</span></span>
+                    </li>
+                    <li>
+                        <div class=""><img src="resources/images/product-page/Apple_iPhone_11_Black_1000_0001.jpg" alt="itemIcon"></div>
+                        <span class="itemSubname">Iphone 11 Max <span class="priceMobile">$12.00</span></span>
                     </li>
                 </ul>
             </aside>
@@ -81,7 +94,8 @@
         </main>
 <!-- ====================================  END OF MAIN  ================================== -->
 <!-- ====================================  START OF ITEM SAMPLES LINK  ================================== -->
-        <div id="linkToProduct"><a href="#"><span>See all Products</span><i><img src="resources/images/icons/icons8_right_32px.png" alt="rightArrow"></i></a></div>
+        <div id="linkToProduct"><a href="product.html"><span>See all Products</span><i><img src="resources/images/icons/icons8_right_32px.png" alt="rightArrow"></i></a></div>
 <!-- ====================================  END OF ITEM SAMPLES LINK  ================================== -->
+<script src="js/app.js"></script>
 </body>
 </html>
