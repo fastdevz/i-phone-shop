@@ -1,5 +1,12 @@
 /* HAMBORGA NAVIGATION*/
-const ham = document.getElementById('navigation');
-const naviUl = document.getElementsByClassName('navUl');
-naviUl.classList.add('active')
-const mobileNav = document.getElementById('hide');
+const ham = document.getElementById('hamborgerIcon');
+const nav = document.querySelector('.navigation');
+const hamClose = document.querySelector('.hamClose');
+ham.addEventListener('click',()=>{
+nav.classList.add('navActive');
+});
+hamClose.addEventListener('click',()=>{
+    nav.classList.remove('navActive');
+    });
+
+
