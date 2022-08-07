@@ -196,7 +196,7 @@
         display:flex ;
         justify-content: center;
         align-items: center;
-        background-color: var(--bgbasket);
+            background-color: var(--bgbasket);
         padding: 5%;
         border: none;
         border-radius: 50%;
@@ -242,7 +242,8 @@
 #itemNav{
     display: flex;
     justify-content: end;
-    gap: 25%;
+    margin: 0;
+    padding: 0;
     #itemNavList{
         display: flex;
         flex-direction: column;
@@ -415,7 +416,7 @@
             margin-inline: 2em;
             margin-bottom: 0;
             @include u.breakpoint-down(small){
-                margin-inline:1em;
+                margin-inline: 1em;
                 width: 30vw;
                  align-self: center;
                  height: 30vw;
@@ -478,3 +479,99 @@
     }
 }
 /*============================== Product page styling  ================================*/
+/*================================ product details styling ===============================*/
+main{
+    padding-inline: 0.5em;
+   
+    @include u.breakpoint-down(small){
+        display: flex;
+        flex-direction: column;
+        .quantity{
+            align-self: center;
+        }
+        .priseDetails{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1em;
+            font-weight: 400;
+            color: var(--txtbg);
+        }
+        h2{
+            font-size: 1.3em;
+            color: var(--txthead);
+            font-weight: 700;
+        }
+        span{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: flex-start;
+            margin-bottom: 2%;
+            img{
+                width: 1.2em;
+                height: 1.2em;
+            }
+        }
+        details{
+            color: var(--txthead);
+            font-size: 1.2em;
+
+            margin-bottom: 2%;
+        }
+        .shopping{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2em;
+            margin-top: 2%;
+           
+            button{
+                border: none;
+                font-size: 1.1em;
+                font-weight: 700;
+                width: 35vw;
+                border-radius: 12px;
+                background-color: var(--bgbasket);
+                height: 10vw;
+            }
+        }
+    }
+}
+.D-rotate{
+    width: 90vw;
+    height: 72vw;
+}
+.quantity{
+    @include u.breakpoint-down(small){
+        width: 10em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        background-color: var(--txthead2);
+        input[type="text"]{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            width: 1.5em;
+            height: 1.5em;
+            border: none;
+            border-radius: 50%;
+            margin-inline: 0.3em;
+        }
+        button{
+            border: none;
+            background-color: transparent;
+        }
+        img{
+            width: 2.1em;
+            height: 2.1em;
+        }
+       
+    }
+}

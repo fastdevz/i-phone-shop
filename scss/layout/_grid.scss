@@ -14,9 +14,8 @@ main{
      #itemBackground{
         @include u.breakpoint-down(small){
             display: flex;
-            width: 98%;
-            height: 60vw;
-          
+            width: 88vw;
+            height: auto;
             justify-content: center;
             align-items: center;
             padding-inline: auto ;
