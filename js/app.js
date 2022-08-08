@@ -10,4 +10,3 @@ hamClose.addEventListener('click',()=>{
     nav.classList.remove('navActive');
     });
 /*End of hamborger navigations*/
-
