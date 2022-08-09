@@ -489,17 +489,17 @@
 }
 /*============================== Product page styling  ================================*/
 /*================================ product details styling ===============================*/
-main{
+#mainproductdetails{
     margin-inline: 10em;
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 0;
-    border: 2px solid red;
     .priseDetails{
         padding: 0;
-        
-        font-size: 1.5vw;
+        line-height: 0.2em;
+        font-size: 1.2vw;
+        height: 2em;
         color: var(--txthead);
         width: 70%;
         display: flex;
@@ -511,9 +511,14 @@ main{
         justify-content: start;
         width: 70%;
         height: 34vw;
+        margin: 0;
+        padding: 0;
+        iframe{
+            margin: 0;
+            padding: 0;
+        }
     }
     .quantity{
-border: 2px solid red;
 font-size: 1.2em;
 margin: 0;
         padding: 0;
@@ -526,8 +531,6 @@ margin: 0;
     span{
         display: flex;
         flex-direction: row;
-        justify-content: start;
-        align-items: flex-start;
         margin-bottom: 0.1em;
         font-size: 1.2em;
         img{
@@ -537,20 +540,19 @@ margin: 0;
 
     }
     details{
-        color: var(--bgcart);
+        color: var(--txthead);
         font-size: 1.2em;
-
-        margin:0;
+        margin: 0 0 0.5em 0;
     }
     .shopping{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         gap: 1.2em;
         margin-top: 2%;
-       
         button{
+
             border: none;
             font-size: 1.1em;
             font-weight: 700;
