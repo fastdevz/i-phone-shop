@@ -14,7 +14,7 @@ main{
      #itemBackground{
         @include u.breakpoint-down(small){
             display: flex;
-            width: 88vw;
+            width: 100%;
             height: auto;
             justify-content: center;
             align-items: center;
@@ -24,7 +24,7 @@ main{
             iframe{
                 width: 100%;
                 border-radius: 12px;
-                height: 60vw;
+                height: 80vw;
             }
          }
      }
