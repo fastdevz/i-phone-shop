@@ -687,3 +687,54 @@ margin: 0;
        
     }
 } 
+// Design of the contact form
+#contactBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+    #containerContact{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #contactForm{
+            background-color: var(--bgcart);
+            border-radius: 20px;
+            border:none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40vw;
+            box-shadow: rgba(0, 0, 0, 0.16)0px 1px 4px;
+            height: max-content;
+            padding: 2% 1% 1% 1%;
+            gap: 0.5em;
+            input:current{
+                border: 1px solid var(--txthead);
+                background-color: red;
+            }
+            input{
+                font-size: 1.1vw;
+                width: 34vw;
+                height: 2.5vw;
+                border-radius: 10px;
+                border: none;
+            }
+            input[type="text"],input[type="email"],input[type="number"]{
+                border-bottom: 2px solid var(--bgbasket);
+                padding: 2%;
+
+            }
+            textarea{
+                border-radius: 10px;
+                border: none;
+            }
+        }
+    }
+// Contact from

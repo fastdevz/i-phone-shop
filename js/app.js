@@ -29,10 +29,6 @@ hamClose.addEventListener('click',()=>{
         tag:'<iframe width="745" height="480" src="https://360.hum3d.com/view/219302/" frameborder="0"></iframe>'
     },
     {
-        name:'Huawei Mate 30 Black 3D Model',
-        tag:'<iframe width="745" height="480" src="https://360.hum3d.com/view/94597/" frameborder="0"></iframe>'
-    },
-    {
         name:'Huawei P20 Black 3D mode',
         tag:' <iframe width="745" height="480" src="https://360.hum3d.com/view/205909/" frameborder="0"></iframe>'
     },
@@ -67,6 +63,6 @@ hamClose.addEventListener('click',()=>{
     return num;
 };
    const dimesions = document.querySelector('#itemBackground');
-   dimesions.innerHTML = iframeData[slideDisplay(15)].tag;
+   dimesions.innerHTML = iframeData[slideDisplay(13)].tag;
    /* End home pages click event for 3d display images */
    
