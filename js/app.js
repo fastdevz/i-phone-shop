@@ -65,4 +65,24 @@ hamClose.addEventListener('click',()=>{
    const dimesions = document.querySelector('#itemBackground');
    dimesions.innerHTML = iframeData[slideDisplay(13)].tag;
    /* End home pages click event for 3d display images */
-   
+   /* cart number incrimenting*/
+    // const upClick = document.querySelector('#upClick');
+    // const downClick = document.querySelector('#downClick');
+    const inputValue = document.querySelector('#iCount');
+    // down function click
+   function increment(){
+    let value = inputValue.value;
+    value++;
+    inputValue.value = value;
+
+   }
+   function decrement(){
+    let value = inputValue.value;
+    value--;
+    inputValue.value = value;
+
+   }
+
+    // console.log(inputValue);
+    // console.log(downClick);
+   /*  end of cart increament*/
