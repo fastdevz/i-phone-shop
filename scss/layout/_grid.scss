@@ -46,3 +46,9 @@ main{
     padding: 0;
     gap: 0;
 }
+.hamClose{
+    display: none;
+    @include u.breakpoint-down(small){
+        display: flex;
+    }
+}
